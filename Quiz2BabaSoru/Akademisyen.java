@@ -2,12 +2,22 @@ package Quiz2BabaSoru;
 
 public abstract class Akademisyen extends Insan {
 	private Arac arac;
-
-	public Akademisyen(String isim, String soyIsim, int yas, boolean ehliyet,Arac arac) {
-		super(isim, soyIsim, yas, ehliyet);
-		this.arac=arac;			
+	private double maas=17002;
+	public Akademisyen(String isim, String soyIsim, int yas, boolean ehliyet) {
+		super(isim, soyIsim, yas, ehliyet);		
 	}
 	
+	
+	public double getMaas() {
+		return maas;
+	}
+
+
+	public void setMaas(double maas) {
+		this.maas = maas;
+	}
+
+
 	public Arac getArac() {
 		return arac;
 	}
@@ -17,6 +27,6 @@ public abstract class Akademisyen extends Insan {
 	}
 
 	public abstract double maasHesapla();
-	public abstract Arac aracAta();
+	public abstract void aracAta(String arac);
 
 }

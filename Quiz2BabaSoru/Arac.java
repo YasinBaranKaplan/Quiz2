@@ -3,11 +3,9 @@ package Quiz2BabaSoru;
 public abstract class Arac {
 	private String marka,model,yakıtTuru;
 	private int motorGucu,tekerlekSayısı;
-	public Arac(String marka, String model, String yakıtTuru, int motorGucu, int tekerlekSayısı) {
-		super();
+	public Arac(String marka, String model,  int motorGucu, int tekerlekSayısı) {
 		this.marka = marka;
 		this.model = model;
-		this.yakıtTuru = yakıtTuru;
 		this.motorGucu = motorGucu;
 		this.tekerlekSayısı = tekerlekSayısı;
 	}

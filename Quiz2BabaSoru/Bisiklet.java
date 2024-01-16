@@ -2,11 +2,11 @@ package Quiz2BabaSoru;
 
 public class Bisiklet extends Arac {
 
-	public Bisiklet(String marka, String model, String yakıtTuru, int motorGucu, int tekerlekSayısı) {
-		super(marka, model, yakıtTuru, motorGucu, tekerlekSayısı);
-		this.setYakıtTuru(yakıtTuruBelirle());
+	public Bisiklet(String marka, String model, int motorGucu, int tekerlekSayısı) {
+		super(marka, model,  motorGucu, tekerlekSayısı);
+		this.setMotorGucu(0);
 	}
-
+	
 	@Override
 	public String yakıtTuruBelirle() {
 		String s ="Yakıtsız çevreci araç :)";
@@ -14,6 +14,11 @@ public class Bisiklet extends Arac {
 	}
 	
 	public String toString() {
-		return getYakıtTuru();
+		return "Bisiklet\n"+
+				"Marka : "+getMarka()+"\n"+
+				"Model : "+getModel()+"\n"+
+				"Tekerlek sayisi : "+getTekerlekSayısı()+"\n"+
+				"Motor gücü : -\n"+
+				"Yakıt türü : "+yakıtTuruBelirle();			
 	}
 }
